@@ -1,0 +1,18 @@
+import numpy as np
+
+Prices = [[140,100,190], [150,115,210], [164,132,225]]
+Cost = [[1000], [1100], [1200]]
+ 
+Inverse = np.linalg.inv(Prices)
+A = np.dot (Inverse, Cost)
+Tickets = np.linalg.solve(Prices,Cost)
+print("Meat Shop")
+print("Bundle 1:₱{:.2f}".format(float(A[0])))
+print("Bundle 2:₱{:.2f}".format(float(A[1])))
+print("Bundle 3:₱{:.2f}".format(float(A[2])))
+print("________________________________")
+print("Meat Shop")
+print("Bundle 1:₱{:.2f}".format(float(Tickets[0])))
+print("Bundle 2:₱{:.2f}".format(float(Tickets[1])))
+print("Bundle 3:₱{:.2f}".format(float(Tickets[2])))
+print("________________________________")
